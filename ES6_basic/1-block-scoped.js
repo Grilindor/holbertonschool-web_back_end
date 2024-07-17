@@ -4,3 +4,5 @@ export default function taskBlock() {
 
   return [task, task2];
 }
+  /* modify the variables so that the variables aren’t
+   overwritten inside the conditional block*/
