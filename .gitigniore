@@ -23,3 +23,12 @@
 hs_err_pid*
 replay_pid*
 node_modules
+
+holbertonschool-web_back_end/ES6_data_manipulation/node_modules/
+node_modules/
+/node_modules
+holbertonschool-web_back_end/ES6_promise/node_modules
+
+
+
+**/node_modules/
