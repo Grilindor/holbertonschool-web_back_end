@@ -5,4 +5,4 @@ from typing import Tuple, Union
 
 def to_kv(k: str, v: Union[float, int]) -> Tuple[str, float]:
     """ return str k and the square float of v """
-    return k, float(v ** 2)
+    return (k, float(v ** 2))
