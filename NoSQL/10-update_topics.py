@@ -4,8 +4,8 @@ from pymongo import MongoClient
 
 
 def update_topics(mongo_collection, name, topics):
-    doc_updeted = mongo_collection.update_many(
+    """ updat a collection in python """
+    mongo_collection.update_many(
         {"name": name},
         {"$set": {"topics": topics}}
         )
-    return doc_updeted
