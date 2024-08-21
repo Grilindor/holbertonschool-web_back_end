@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-""" 12. Log stats """
+"""
+nginx_stats.py
+A script that provides statistics about Nginx logs stored in a MongoDB database.
+"""
 from pymongo import MongoClient
 
 
@@ -11,8 +14,9 @@ def main():
     total_logs = collection.count_documents({})
     print(f"{total_logs} logs")
 
-    print("Methods:")
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
+    print("Methods:")
+
     for method in methods:
         m_count = collection.count_documents({"method": method})
         print(f"\tmethod{method}: {m_count}")
