@@ -1,6 +1,5 @@
 const http = require('http');
 const fs = require('fs');
-const path = require('path');
 
 function countStudents(database) {
   return new Promise((resolve, reject) => {
