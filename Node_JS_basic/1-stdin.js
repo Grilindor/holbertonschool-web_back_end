@@ -1,18 +1,13 @@
-#!/usr/bin/env node
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-console.log("Welcome to Holberton School, what is your name?");
+process.stdin.on('readable', () => {
+  const chunk = process.stdin.read();
 
-// Active stdin
-process.stdin.resume();
-process.stdin.setEncoding('utf-8');
-
-// Écoute de l'entrée
-process.stdin.on('data', function(data) {
-  const name = data.trim();
-  console.log(`Your name is: ${name}`);
+  if (chunk) {
+    process.stdout.write(`Your name is: ${chunk}`);
+  }
 });
 
-// Écoute la fin de l'entrée
-process.stdin.on('end', function() {
-  console.log('This important software is now closing');
+process.stdin.on('end', () => {
+  process.stdout.write('This important software is now closing\n');
 });
