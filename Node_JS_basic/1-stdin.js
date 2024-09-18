@@ -1,21 +1,18 @@
+#!/usr/bin/env node
+
 console.log("Welcome to Holberton School, what is your name?");
 
 // Active stdin
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
 
-// Variable pour stocker l'entrée de l'utilisateur
-let inputData = '';
-
-// Écouter les données de l'utilisateur
+// Écoute de l'entrée
 process.stdin.on('data', function(data) {
-  inputData += data;
+  const name = data.trim();
+  console.log(`Your name is: ${name}`);
 });
 
-// Écouter la fin de l'entrée (utile pour le pipe avec echo)
+// Écoute la fin de l'entrée
 process.stdin.on('end', function() {
-  const name = inputData.trim();
-  console.log(`Your name is: ${name}`);
   console.log('This important software is now closing');
-  process.exit();
 });
