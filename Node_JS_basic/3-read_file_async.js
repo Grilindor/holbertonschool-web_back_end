@@ -1,6 +1,11 @@
 const fs = require('fs').promises;
 const path = require('path');
 
+/**
+ * Counts the students in a CSV data file.
+ * @param {String} dataPath The path to the CSV data file.
+ */
+
 async function countStudents(filePath) {
     const absolutePath = path.resolve(filePath);
 
