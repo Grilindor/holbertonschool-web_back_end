@@ -4,12 +4,23 @@
   "description": "- <a href=\"https://intranet.hbtn.io/rltoken/RqwwGmqIE4M3WwjqXusJ7w\">Node JS getting started</a>  - <a href=\"https://intranet.hbtn.io/rltoken/TyodG31Rx3XIiGE7HnxNYw\">Process API doc</a>  - <a href=\"https://intranet.hbtn.io/rltoken/Ic5-12q1xFd74_0psW4CdQ\">Child process</a>  - <a href=\"https://intranet.hbtn.io/rltoken/Bi4zX1TeHY2RF5lLYgKspg\">Express getting started</a>  - <a href=\"https://intranet.hbtn.io/rltoken/eBgT_wcT40RgCLtYXuRpvw\">Mocha documentation</a>  - <a href=\"https://intranet.hbtn.io/rltoken/rlx9PqRqSQkA6v6ZJmYKNw\">Nodemon documentation</a>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "lint": "eslint .",
+    "full-test": "npm run lint && npm run test"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.0",
     "node": "^22.8.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "eslint": "^9.10.0",
+    "globals": "^15.9.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }
+
+
