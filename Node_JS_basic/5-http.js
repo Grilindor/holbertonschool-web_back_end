@@ -53,9 +53,11 @@ const app = http.createServer((req, res) => {
         let responseText = 'This is the list of our students\n';
         responseText += `Number of students: ${totalStudents}\n`;
 
+        const lines = [];
         for (const [field, students] of Object.entries(fields)) {
-          responseText += `Number of students in ${field}: ${students.length}. List: ${students.join(', ')}\n`;
+          lines.push(`Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`);
         }
+        responseText += lines.join('\n');
 
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end(responseText);
